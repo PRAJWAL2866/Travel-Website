@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+   <!-- <link rel="stylesheet" href="{% static 'css/stylesheet1.css' %}">-->
+    <!--<script src="{% static 'js/script.js' %}"></script>-->
+
+    <!-- Bootstrap 5 Local CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.bundle.min.js' %}">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+
+    <!--<nav class="i">
+            <img src="images.jpeg" alt="">
+        </nav>-->
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="#" class="logo"><span>C</span>ELESTIAL WINGS</span></a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#book">Book</a>
+            <a href="#packages">Packeges</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="Search here.....">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+
+
+    <div class="login-form-container">
+        <i class="fas fa-times" id="form-close"></i>
+
+       <form action="">
+            <h3>Enter your details</h3>
+            <input type="text" class="box" placeholder="enter your name">
+            <input type="text" class="box" placeholder="enter your address">
+            <input type="email" class="box" placeholder="enter your eamil">
+            <input type="password" class="box" placeholder="enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+     <!--<label for="remember">remember</label>-->       
+           <!--<p>Forget password ? <a href="#">click here</a></p>
+            <p>don't have an account ? <a href="C:\Users\Dell\OneDrive\Desktop\travel\travel\templates\register.html">register now</a></p>
+--> 
+        </form>
+    </div>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Adventure is worthwhile</h3>
+            <p>Discover new places with us,</p>
+            <a href="#" class="btn">Discover More</a>
+        </div>
+
+        <div class="controls">
+            <span class="vid-btn active" data-src="video/forest.mp4"></span>
+            <span class="vid-btn" data-src="video/page.mp4"></span>
+            <span class="vid-btn" data-src="video/japan.mp4"></span>
+            <span class="vid-btn" data-src="video/flowers.mp4"></span>
+
+        </div>
+        <div class="video-container">
+            <video src="{% static 'images/hiker.mp4' %}" id="video-slider" loop autoplay muted ></video>
+        </div>
+    </section>
+
+    <section class="packages" id="packages">
+
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{% static 'images/mumbai.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>mumbai</h3>
+                    <p>
+ Mumbai, the “City of Dreams,” blends heritage, modernity, Bollywood, and coastal beauty. Iconic landmarks, vibrant street food, bustling markets, and cultural experiences make it unforgettable. Best explored in winter, Mumbai’s energy and charm captivate every traveler.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹20000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/sydney.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Sydney</h3>
+                    <p>Sydney, Australia’s iconic harbor city, boasts stunning landmarks like the Sydney Opera House, Harbour Bridge, and Bondi Beach. Renowned for its vibrant culture, world-class dining, and natural beauty, Sydney is best visited in summer (December-February) for unforgettable experiences..</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹78000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/hawai.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>hawai</h3>
+                    <p> Hawaii, a tropical paradise, is famed for its pristine beaches, volcanic landscapes, and vibrant Polynesian culture. Iconic spots like Waikiki Beach, Mauna Kea, and lush rainforests offer unmatched beauty. Best visited year-round, Hawaii promises unforgettable island adventures</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹85000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/spiti.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>spiti valley</h3>
+                    <p>Spiti Valley, a Himalayan gem, offers breathtaking landscapes, ancient monasteries, and serene villages like Kaza and Tabo. Known for its rugged beauty and adventure, it’s best visited in summer (May-September) for trekking, stargazing, and spiritual tranquility.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹67000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/chandratal.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt">chandratal</i></h3>
+                    <p>Chandratal Lake, the "Moon Lake" of Himachal Pradesh, is a pristine alpine gem surrounded by towering peaks. Known for its crystal-clear waters and mesmerizing reflections, it’s best visited in summer (June-September) for camping, trekking, and serene beauty.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">69000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/vietnam.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Vietnam</h3>
+                    <p>A Southeast Asian gem, Vietnam offers stunning landscapes like Halong Bay, vibrant cities like Hanoi and Ho Chi Minh, and delicious cuisine. Best visited in spring or autumn, it’s a mix of culture, history, and natural beauty.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹55999 <span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static 'images/japan.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>MOUNT FUJI</h3>
+                    <p>Japan’s iconic volcano, Mount Fuji, is a symbol of beauty and adventure. Ideal for climbing in summer (July-September), it offers breathtaking views, serene lakes, and cultural significance as a UNESCO World Heritage Site.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹84000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'images/hima.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Himalayas Mountains</h3>
+                    <p>The majestic Himalayas span multiple countries, offering towering peaks, spiritual retreats, and trekking trails like Everest Base Camp and Annapurna. Best visited in spring or autumn, they’re perfect for adventure and tranquility.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹40000<span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static 'images/Goa.jpeg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Goa</h3>
+                    <p> India’s party capital, Goa, is famous for its golden beaches, vibrant nightlife, and Portuguese heritage. Best visited in winter (November-February), it’s ideal for relaxation, water sports, and savoring seafood and vibrant festivals.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹20000 <span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static 'images/rome.jpg' %}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Rome</h3>
+                    <p>The Eternal City, Rome, is a treasure trove of history, from the Colosseum to Vatican City. Best visited in spring or fall, it captivates with ancient landmarks, Italian cuisine, and an unmatched cultural experience.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₹55000 <span>/per person</span></div>
+                    <a href="#book" class="btn">Book now</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    
+    <section class="book" id="book">
+        <h1 class="heading">
+            <span>b</span>
+            <span>o</span>
+            <span>o</span>
+            <span>k</span>
+            <span class="space"></span>
+            <span>n</span>
+            <span>o</span>
+            <span>w</span>
+
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="{% static 'images/winter.jpg' %}" alt="">
+            </div>
+<!--Booking Form-->
+        <form method="POST" action="{% url 'book' %}">
+    {% csrf_token %}
+
+             <div class="inputBox">
+        <h2>Name</h2>
+        <input type="text" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="inputBox">
+        <h2>Address</h2>
+        <input type="text" name="address" placeholder="Enter your address" required>
+    </div>
+
+    <div class="inputBox">
+        <h2>Phone Number</h2>
+        <input type="text" name="phone" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="inputBox">
+        <h2>Email</h2>
+        <input type="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="inputBox">
+        <h2>DESTINATION</h2>
+        <select name="destination" class="box">
+            <option value="" disabled selected>Select a Destination</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Sydney">Sydney</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Spiti Valley">Spiti Valley</option>
+            <option value="Chandratal">Chandratal</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Mount Fuji">Mount Fuji</option>
+            <option value="Himalayas">Himalayas</option>
+            <option value="Goa">Goa</option>
+            <option value="Rome">Rome</option>
+        </select>
+    </div>
+
+    <div class="inputBox">
+        <h2>Number of People</h2>
+        <input type="number" name="number_of_people" placeholder="Number of People" required>
+    </div>
+
+    <div class="inputBox">
+        <h2>Arrival Date</h2>
+        <input type="date" name="arrival_date" required>
+    </div>
+
+    <div class="inputBox">
+        <h2>Leaving Date</h2>
+        <input type="date" name="leaving_date" required>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Book Now">
+</form>
+
+        </div>
+    </section>
+
+
+    <section class="services" id="services">
+
+        <h1 class="heading">
+            <span>S</span>
+            <span>E</span>
+            <span>R</span>
+            <span>V</span>
+            <span>I</span>
+            <span>C</span>
+            <span>E</span>
+            <span>S</span>
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>Affordable Hotel</h3>
+                <p>Relax in comfort without breaking the bank. Find the perfect blend of affordability and convenience for a stress-free stay wherever you go.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Food & Drinks</h3>
+                <p>Indulge in a world of flavors, from delectable local dishes to international delicacies. Quench your thirst with expertly crafted drinks and unique beverages.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Safety Guide</h3>
+                <p>Your safety is our priority. Stay informed with practical tips, essential advice, and updated travel guidelines to make your journey worry-free.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>Around the World</h3>
+                <p>Discover the beauty and diversity of our planet. From bustling cities to serene landscapes, embark on a journey that inspires and excites.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>Fastest Travel</h3>
+                <p>Save time with travel solutions that get you there faster. Experience the joy of seamless transportation for a hassle-free adventure.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>Adventures</h3>
+                <p>Step out of your comfort zone and dive into exhilarating activities. Whether it’s hiking, climbing, or exploring, every moment promises excitement and discovery.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="gallery" id="gallery">
+            <h1 class="heading">
+                <span>g</span>
+                <span>a</span>
+                <span>l</span>
+                <span>l</span>
+                <span>e</span>
+                <span>r</span>
+                <span>y</span>
+            </h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="{% static 'images/gallery1.jpg' %}" alt="">
+                    <div class="content">
+                        <h3>amazing places</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est fugiat tempora cupiditate, id velit totam error ipsum expedita magni! Officia cumque odio dolor corporis laudantium praesentium, perferendis culpa rerum.</p>
+                        <a href="#" class="btn">see more</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/gallery2.jpg' %}" alt="">
+                    <div class="content">
+                        <h3>amazing places</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est fugiat tempora cupiditate, id velit totam error ipsum expedita magni! Officia cumque odio dolor corporis laudantium praesentium, perferendis culpa rerum.</p>
+                        <a href="#" class="btn">see more</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/gallery3.jpg' %}" alt="">
+                    <div class="content">
+                        <h3>amazing places</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est fugiat tempora cupiditate, id velit totam error ipsum expedita magni! Officia cumque odio dolor corporis laudantium praesentium, perferendis culpa rerum.</p>
+                        <a href="#" class="btn">see more</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/gallery4.jpg' %}" alt="">
+                    <div class="content">
+                        <h3>amazing places</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est fugiat tempora cupiditate, id velit totam error ipsum expedita magni! Officia cumque odio dolor corporis laudantium praesentium, perferendis culpa rerum.</p>
+                        <a href="#" class="btn">see more</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/gallery3.jpg' %}" alt="">
+                    <div class="content">
+                        <h3>amazing places</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est fugiat tempora cupiditate, id velit totam error ipsum expedita magni! Officia cumque odio dolor corporis laudantium praesentium, perferendis culpa rerum.</p>
+                        <a href="#" class="btn">see more</a>
+                    </div>
+                </div>
+            </div>
+        </h1>
+    </section>
+
+
+    <section class="review" id="review">
+        <h1 class="heading">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+
+        <div class="swiper-container review-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="{% static 'images/new re.jpg' %}" alt="">
+                        <h3>Chris Hemsworth</h3>
+                        <p>"Absolutely fantastic experience! The stay was comfortable, and the service was beyond expectations. The staff was friendly and attentive, and the location couldn’t have been better. I’ll definitely be returning for another stay!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="{% static 'images/new re2.jpg' %}" alt="">
+                        <h3>Paul</h3>
+                        <p>"What an unforgettable experience! The food was delicious, and the surroundings were serene. A perfect getaway to relax and recharge. I highly recommend this place to anyone looking for peace and beauty."</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="{% static 'images/new re3.jpg' %}" alt="">
+                        <h3>Tom cruise</h3>
+                        <p>"This was one of the best vacations I've had! The location was perfect, the amenities were excellent, and the staff made me feel at home. I would definitely recommend it to friends and family!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="{% static 'images/new re4.jpg' %}" alt="">
+                        <h3>Shreyans Chanekar</h3>
+                        <p>"Incredible experience! From the moment I arrived, I was impressed by the attention to detail and the welcoming atmosphere. I will definitely be coming back for another relaxing getaway!"</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="{% static 'images/contact.png' %}" alt="">
+            </div>
+<!--Contact form-->
+             <form method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+
+        <div class="inputBox">
+            <h2>Name</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="inputBox">
+            <h2>Email</h2>
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="inputBox">
+            <h2>Phone Number</h2>
+            <input type="text" name="number" placeholder="Your Phone Number" required>
+        </div>
+
+        <div class="inputBox">
+            <h2>Subject</h2>
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+
+        <div class="inputBox">
+            <h2>Message</h2>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Send Message">
+    </form>
+
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p>At CELESTIAL WINGS, we are passionate about crafting unforgettable travel experiences. Founded on the principles of trust, quality, and adventure, we specialize in providing customized tours that cater to every traveler’s unique interests. Whether you're dreaming of serene getaways, thrilling adventures, or cultural explorations, our dedicated team ensures every journey is seamless and enriching. With years of expertise and a deep love for travel, we take pride in connecting people to extraordinary destinations while creating memories that last a lifetime. Let us turn your wanderlust into reality—because your journey is our passion.</p>
+            </div>
+            <div class="box">
+                <h3>branch location</h3>
+                <a href="#">India</a>
+                <a href="#">USA</a>
+                <a href="#">FRANCE</a>
+                <a href="#">GERMANY</a>
+                <a href="#">JAPAN</a>
+            </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">home</a>
+            <a href="#">Book</a>
+            <a href="#">Packeges</a>
+            <a href="#">services</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>Follow us</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Linkedin</a>
+        </div>
+    </div>
+        <h1 class="credit">Created by <span>MR.PRAJWAL PHALKE</span>| all rights reserved!</h1>
+
+
+    </section>
+
+<!--Alert message-->
+   {% if messages %}
+    {% for message in messages %}
+        <script>
+            alert("{{ message }}");
+        </script>
+    {% endfor %}
+{% endif %}
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+    let searchBtn=document.querySelector('#search-btn');
+    let searchBar=document.querySelector('.search-bar-container');
+    let formBtn=document.querySelector('#login-btn');
+    let loginForm=document.querySelector('.login-form-container');
+    let formClose=document.querySelector('#form-close');
+    let menu=document.querySelector('#menu-bar');
+    let navbar=document.querySelector('.navbar');
+    let videoBtn = document.querySelectorAll('.vid-btn');
+
+
+
+
+    window.onscroll=()=>{
+        searchBtn.classList.remove('fa-times');
+        searchBar.classList.remove('active');
+        menu.classList. remove('fa-times');
+        navbar.classList.remove('active');
+    }
+
+    videoBtn.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+        document.querySelector('.controls .active').classList.remove('active');
+        btn.classList.add('active');
+        let src = btn.getAttribute('data-src');
+        document.querySelector('#video-slider').src = src;
+    });
+});
+
+    menu.addEventListener('click',()=>{
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    });
+
+    searchBtn.addEventListener('click',()=>{
+        searchBtn.classList.toggle('fa-times');
+        searchBar.classList.toggle('active');
+    });
+
+    formBtn.addEventListener('click',()=>{
+        loginForm.classList.add('active');
+    });
+    var swiper = new Swiper(".review-slider", {
+    spaceBetween: 20,
+    loop:true,
+});
+
+    formClose.addEventListener('click',()=>{
+        loginForm.classList.remove('active');
+    });
+
+
+ videoBtn.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+        document.querySelector('.controls .active').classList.remove('active');
+        btn.classList.add('active');
+        let src = btn.getAttribute('data-src');
+        document.querySelector('#video-slider').src = src;
+    });
+});
+
+
+
+
+</script>
+
+</body>
+</html>
